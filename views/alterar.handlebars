@@ -1,0 +1,20 @@
+<form action="/update" method="POST" enctype="multipart/form-data" class="post-form">
+    <div class="form-container">
+        {{#each posts}}
+            <label for="id">Código:</label>
+            <input class="inputa" type="text" name="id" value="{{id}}" readonly="true" id="id">
+
+            <label for="titulo">Titulo:</label>
+            <input type="text" class="inputa" name="titulo" value="{{titulo}}" id="titulo">
+
+            <label for="conteudo">Conteúdo:</label>
+            <textarea class="inputa" name="conteudo" id="conteudo">{{conteudo}}</textarea><br>
+
+            <label for="img">Imagem:</label>
+            <input type="file" name="img" id="img"><br><br><br>
+
+            <input type="submit" class="alterar" value="Alterar">
+            <a href="/" class="back">Voltar</a>
+        {{/each}}
+    </div>
+</form>

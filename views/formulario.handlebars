@@ -1,0 +1,14 @@
+<form action="/add" method="POST" enctype="multipart/form-data" class="post-form">
+    <div class="form-container">
+        <h1 class="title">Cadastro de Item</h1>
+        <label for="titulo">Titulo:</label>
+        <input type="text" name="titulo" id="titulo">
+        <label for="conteudo">Conteúdo:</label>
+        <textarea name="conteudo" id="conteudo"></textarea>
+        <label for="img">Imagem:</label>
+        <input type="file" name="img" id="img" onchange="document.getElementById('preview').src = window.URL.createObjectURL(this.files[0])"><br>
+        <img id="preview" src="" alt="Imagem selecionada aparecerá aqui" width="200" style="max-height: 200px;"/><br><br><br>
+        <button type="submit">Finalizar</button><br>
+        <a href="/" class="back">Voltar</a>
+    </div>
+</form>

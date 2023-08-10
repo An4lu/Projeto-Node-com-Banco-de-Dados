@@ -1,0 +1,16 @@
+<h1>Banco de Favoritos</h1>
+<a href="/cad"><button class="buttoncreate">Criar um novo item</button></a>
+
+<div class="cards-container">
+{{#each posts}}
+    <div class="post-card">
+        <h1 class="id">Id: {{id}}</h1>
+        <h2> {{titulo}}</h2>
+        <p>Conteúdo: {{conteudo}}</p>
+        <p>Data: {{createdAt}}</p>
+        <img src="/img/{{img}}" alt="{{titulo}}">
+        <a href="/deletar/{{id}}"><button class="deletar">Deletar</button></a>
+        <a href="/alterar/{{id}}"><button>Alterar</button></a>
+    </div>
+{{/each}}
+</div>
